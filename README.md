@@ -94,8 +94,9 @@ Check `dictation.log` for diagnostics.
 |---------|----------|
 | No beep on key press | Scroll Lock might be captured by another app |
 | "waveInOpen failed" | Check Windows microphone permissions (Settings > Privacy > Microphone) |
-| "ERROR API" | Check API key, internet connection |
-| Text not appearing | Make sure target window supports Ctrl+V paste |
+| "ERROR API: 403 Forbidden" | Groq blocks requests from certain IPs. **Disable VPN** - this is the most common cause. If not using a VPN, check firewall/proxy settings. |
+| "ERROR API" (other) | Check API key validity at [console.groq.com/keys](https://console.groq.com/keys) and internet connection |
+| Beeps work but text doesn't appear | Check `dictation.log` - most likely an API error (see above). If log shows "Pasted: ..." but nothing appears, make sure the target window supports Ctrl+V. |
 | Polish chars broken | Should not happen (clipboard+Ctrl+V is Unicode-safe). File a bug. |
 
 ## Fullscreen Games
